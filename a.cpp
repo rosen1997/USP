@@ -1,5 +1,5 @@
 class a
 {
-    private int a;
+    private int w;
 	private char b;
 }
