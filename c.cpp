@@ -1,4 +1,1 @@
-class c
-{
-private int c;
-}
+class c {}
