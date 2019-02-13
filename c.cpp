@@ -1,4 +1,4 @@
 class c
 {
-private int c;
+int c;
 }
