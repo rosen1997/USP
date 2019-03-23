@@ -71,7 +71,7 @@ namespace QRScan
                 string Result = QRCode.ByteArrayToStr(DataByteArray[0]);
                 LBL_test.Text = Result;
             }
-            catch { MessageBox.Show("Could not detect QR code!"); }
+            catch { MessageBox.Show("Could not detect QR code!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); }
         }
     }
 }
