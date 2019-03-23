@@ -1,0 +1,14 @@
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\QRScan.exe.config
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.csprojResolveAssemblyReference.cache
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.Form1.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.Properties.Resources.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.csproj.GenerateResource.Cache
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\QRScan.exe
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\QRScan.pdb
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\AForge.dll
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\AForge.Imaging.dll
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\AForge.Video.DirectShow.dll
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\AForge.Video.dll
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\QRCodeEncoderDecoderLibrary.dll
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.exe
+E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.pdb
