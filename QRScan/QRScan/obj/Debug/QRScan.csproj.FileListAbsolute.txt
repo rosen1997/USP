@@ -12,6 +12,3 @@ E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\AForge.Video.dll
 E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\bin\Debug\QRCodeEncoderDecoderLibrary.dll
 E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.exe
 E:\vsichko\SIT\kurs_3\semester_2\USP\QRScan\QRScan\obj\Debug\QRScan.pdb
-E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\bin\Debug\QRScan.exe.config
-E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.exe
-E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.pdb

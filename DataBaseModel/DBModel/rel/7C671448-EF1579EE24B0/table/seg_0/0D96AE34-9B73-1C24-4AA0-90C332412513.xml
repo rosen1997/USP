@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D96AE34-9B73-1C24-4AA0-90C332412513" name="People">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>94B47943-6EF6-E2C2-87F2-816AE0CC8D58</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="A986560D-D652-3340-F244-E021547025C9">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>1CF3FFED-A565-B926-EC77-C069163EA24F</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="2C70AF50-5D54-36B3-B270-BB756DB5BCD3">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>5FD9FF24-8DF7-A88A-7892-DDE845A6C6B2</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Position" id="38BFB2FA-0131-BE2F-9313-A4CC8C97BFF0">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>C75578FA-F835-3254-9CF3-F18B4D65E245</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32</dataTypeSize>
+<ownDataTypeParameters>32,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="79D8D1D3-C22B-9221-7C2D-E283015ECC9C" name="People_PK">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>9749B46E-4ADF-805A-999F-E49E8561127F</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A986560D-D652-3340-F244-E021547025C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

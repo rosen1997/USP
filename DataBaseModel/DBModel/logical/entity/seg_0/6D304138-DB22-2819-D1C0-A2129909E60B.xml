@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6D304138-DB22-2819-D1C0-A2129909E60B" name="AtWork">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:03:44 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="A9F617B0-D7A8-9477-1330-2804D36E594E">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:03:57 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Enter" id="3522A9EE-2C4F-E81D-FFEC-5410225A0A59">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:04:11 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Leave" id="99D3398B-E4E1-3B46-8D8A-E16E26CEA095">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:04:40 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="47769251-A7DC-7150-3FB5-13AC7702E32A">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:24 UTC</createdTime>
+<generatorID>DD2FA288-8797-EF8C-A21E-68CBABA57C7F</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<referedAttribute>1CF3FFED-A565-B926-EC77-C069163EA24F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AF15CF67-524A-A4B4-9719-F1CBF95C1B29" name="AtWork PK">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:04:10 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A9F617B0-D7A8-9477-1330-2804D36E594E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

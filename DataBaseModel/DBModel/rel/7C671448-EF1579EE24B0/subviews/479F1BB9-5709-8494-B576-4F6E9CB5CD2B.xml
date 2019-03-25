@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.relational.DPVRelational" name="Relational_1" id="479F1BB9-5709-8494-B576-4F6E9CB5CD2B">
+<createdBy>ROSEN</createdBy>
+<modifiedBy>ROSEN</modifiedBy>
+<createdTime>2019-03-25 09:05:48 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="0D96AE34-9B73-1C24-4AA0-90C332412513" otype="Table" vid="97159517-AA04-CA33-7E00-E1D9D36F23B7">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="81" y="62" width="183" height="95"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="522FB2AB-F774-1F8B-A594-40D3C72FDD6A" otype="Table" vid="CA19AFBA-D59D-9192-D8CE-2E8F7C701980">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="361" y="92" width="189" height="128"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="D30DEAA6-6A1D-9A29-65A3-0E325CBFA026" otype="Table" vid="D551379D-F698-CAC4-BB43-4391242EF5F6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="193" y="292" width="216" height="146"/>
+</OView>
+</objectViews>
+<connectors>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="2DE3D092-B0FF-D7CE-BBCE-75109C74FB96" otype="FKIndexAssociation" vid_source="97159517-AA04-CA33-7E00-E1D9D36F23B7" vid_target="CA19AFBA-D59D-9192-D8CE-2E8F7C701980">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="264" y="114"/>
+<point x="361" y="114"/>
+</points>
+</Connector>
+<Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="FAE4CB5D-C410-1AB8-4887-B298B5BFD4F7" otype="FKIndexAssociation" vid_source="97159517-AA04-CA33-7E00-E1D9D36F23B7" vid_target="D551379D-F698-CAC4-BB43-4391242EF5F6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<lineWidth>1</lineWidth>
+<points>
+<point x="228" y="157"/>
+<point x="228" y="292"/>
+</points>
+</Connector>
+</connectors>
+</Diagram>

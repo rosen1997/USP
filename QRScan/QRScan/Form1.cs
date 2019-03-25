@@ -48,10 +48,50 @@ namespace QRScan
         private void BTN_start_Click(object sender, EventArgs e)
         {
             FinalFrame = new VideoCaptureDevice(CaptureDevice[CMB_cameras.SelectedIndex].MonikerString);// specified web cam and its filter moniker string
+            FinalFrame.VideoResolution = FinalFrame.VideoCapabilities[2];
             FinalFrame.NewFrame += new NewFrameEventHandler(FinalFrame_NewFrame);// click button event is fired, 
             FinalFrame.Start();
         }
+        public void wait(int milliseconds)
+        {
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+            //Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                //Console.WriteLine("stop wait timer");
+            };
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
+        }
 
+        private void buttonLess()
+        {
+            int flag = 0;
+            for (int i = 0; i < 20; i++)
+            { 
+                QRDecoder QRCodeDecoder = new QRDecoder();
+                byte[][] DataByteArray = QRCodeDecoder.ImageDecoder((Bitmap)pictureBox1.Image);
+                try
+                {
+                    string Result = QRCode.ByteArrayToStr(DataByteArray[0]);
+                    LBL_test.Text = Result;
+                    flag = 1;
+                    break;
+                }
+                catch { }
+                wait(500);
+            }
+            if (flag == 0)
+                MessageBox.Show("Could not detect QR","Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
         private void BTN_stop_Click(object sender, EventArgs e)
         {
             if (FinalFrame.IsRunning == true) FinalFrame.Stop();
@@ -72,6 +112,11 @@ namespace QRScan
                 LBL_test.Text = Result;
             }
             catch { MessageBox.Show("Could not detect QR code!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); }
+        }
+
+        private void BTN_startCapturing_Click(object sender, EventArgs e)
+        {
+            buttonLess();
         }
     }
 }

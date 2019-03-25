@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D30DEAA6-6A1D-9A29-65A3-0E325CBFA026" name="AtWork">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>6D304138-DB22-2819-D1C0-A2129909E60B</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1CC7E1A2-503E-2C4E-D217-D8E8057BE950">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>A9F617B0-D7A8-9477-1330-2804D36E594E</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="People_ID" id="79212D66-07C3-2540-DD20-FC7A56D88394">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>47769251-A7DC-7150-3FB5-13AC7702E32A</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FAE4CB5D-C410-1AB8-4887-B298B5BFD4F7" referredColumn="A986560D-D652-3340-F244-E021547025C9"/>
+</associations>
+</Column>
+<Column name="Enter" id="C8D71EEB-D8AC-DF8B-F34C-490BBB9B2B17">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>3522A9EE-2C4F-E81D-FFEC-5410225A0A59</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Leave" id="88C37EFB-1263-9D9C-6FD5-45FB6F7B0FD1">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>99D3398B-E4E1-3B46-8D8A-E16E26CEA095</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5B1ECEF-A5F5-C3E0-0D8D-53C247398E09" name="AtWork_PK">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>AF15CF67-524A-A4B4-9719-F1CBF95C1B29</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CC7E1A2-503E-2C4E-D217-D8E8057BE950"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B2FBB120-8306-B034-5803-2ED91DB42867" name="AtWork__IDX">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>DD2FA288-8797-EF8C-A21E-68CBABA57C7F</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="79212D66-07C3-2540-DD20-FC7A56D88394"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D37ECBD9-B6B5-3C88-D536-C14FD6514B4B" name="AtWork_People_FK">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:06:28 UTC</createdTime>
+<generatorID>DD2FA288-8797-EF8C-A21E-68CBABA57C7F</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79212D66-07C3-2540-DD20-FC7A56D88394"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

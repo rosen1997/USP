@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9B6427FF-80EB-84C9-19FD-7A4FD126E7B9" name="Records">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 08:55:31 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="E8246506-06AC-807A-8E5F-6C5D400BDC04">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 08:55:40 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Enter" id="6AC2E7AC-CED8-1B75-C913-F820C972F01F">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 08:55:47 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Leave" id="493CB62C-C616-B4F1-1D7A-9E4C5085BC50">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 08:58:28 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="AF0778E3-E92A-FFB9-2A96-2429CF66DD34">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 09:03:30 UTC</createdTime>
+<generatorID>5C4F4BAF-07C0-E211-78B3-CA9B35BCD363</generatorID>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<referedAttribute>1CF3FFED-A565-B926-EC77-C069163EA24F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A769C098-F52B-3F23-F8BB-651C24BD5CE3" name="Records PK">
+<createdBy>ROSEN</createdBy>
+<createdTime>2019-03-25 08:55:46 UTC</createdTime>
+<ownerDesignName>DBModel</ownerDesignName>
+<engineerTo>
+<item key="7C671448-8E7B-F793-C87F-EF1579EE24B0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E8246506-06AC-807A-8E5F-6C5D400BDC04</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

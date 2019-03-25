@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="6D304138-DB22-2819-D1C0-A2129909E60B" name="AtWork" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EBA7ABF8-ABF3-D55B-048F-978B77A4329B" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="94B47943-6EF6-E2C2-87F2-816AE0CC8D58" name="People" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EBA7ABF8-ABF3-D55B-048F-978B77A4329B" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="9B6427FF-80EB-84C9-19FD-7A4FD126E7B9" name="Records" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="EBA7ABF8-ABF3-D55B-048F-978B77A4329B" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="5C4F4BAF-07C0-E211-78B3-CA9B35BCD363" name="Relation_5" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="EBA7ABF8-ABF3-D55B-048F-978B77A4329B" propertySourceId="94B47943-6EF6-E2C2-87F2-816AE0CC8D58" propertyTargetId="9B6427FF-80EB-84C9-19FD-7A4FD126E7B9"/>
+   <object objectType="Relation" objectID="DD2FA288-8797-EF8C-A21E-68CBABA57C7F" name="Relation_7" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="EBA7ABF8-ABF3-D55B-048F-978B77A4329B" propertySourceId="94B47943-6EF6-E2C2-87F2-816AE0CC8D58" propertyTargetId="6D304138-DB22-2819-D1C0-A2129909E60B"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
