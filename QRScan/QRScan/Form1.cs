@@ -82,8 +82,22 @@ namespace QRScan
                 try
                 {
                     string Result = QRCode.ByteArrayToStr(DataByteArray[0]);
-                    LBL_test.Text = Result;
+                    int ID;
+                    int.TryParse(Result, out ID);
                     flag = 1;
+
+                    dbControl oDB = new dbControl(ID);
+                    try
+                    {
+                        oDB.connectToDB();
+                        oDB.writeToDB();
+                        oDB.closeConnection();
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                     break;
                 }
                 catch { }
@@ -109,7 +123,7 @@ namespace QRScan
             try
             {
                 string Result = QRCode.ByteArrayToStr(DataByteArray[0]);
-                LBL_test.Text = Result;
+                //LBL_test.Text = Result;
             }
             catch { MessageBox.Show("Could not detect QR code!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); }
         }

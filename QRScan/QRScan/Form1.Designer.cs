@@ -33,7 +33,6 @@
             this.BTN_stop = new System.Windows.Forms.Button();
             this.BTN_scan = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LBL_test = new System.Windows.Forms.Label();
             this.BTN_startCapturing = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,12 +67,13 @@
             // 
             // BTN_scan
             // 
-            this.BTN_scan.Location = new System.Drawing.Point(263, 451);
+            this.BTN_scan.Location = new System.Drawing.Point(126, 456);
             this.BTN_scan.Name = "BTN_scan";
             this.BTN_scan.Size = new System.Drawing.Size(121, 23);
             this.BTN_scan.TabIndex = 3;
             this.BTN_scan.Text = "Scan";
             this.BTN_scan.UseVisualStyleBackColor = true;
+            this.BTN_scan.Visible = false;
             this.BTN_scan.Click += new System.EventHandler(this.BTN_scan_Click);
             // 
             // pictureBox1
@@ -85,20 +85,11 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // LBL_test
-            // 
-            this.LBL_test.AutoSize = true;
-            this.LBL_test.Location = new System.Drawing.Point(35, 30);
-            this.LBL_test.Name = "LBL_test";
-            this.LBL_test.Size = new System.Drawing.Size(46, 17);
-            this.LBL_test.TabIndex = 5;
-            this.LBL_test.Text = "label1";
-            // 
             // BTN_startCapturing
             // 
-            this.BTN_startCapturing.Location = new System.Drawing.Point(497, 84);
+            this.BTN_startCapturing.Location = new System.Drawing.Point(263, 451);
             this.BTN_startCapturing.Name = "BTN_startCapturing";
-            this.BTN_startCapturing.Size = new System.Drawing.Size(117, 28);
+            this.BTN_startCapturing.Size = new System.Drawing.Size(121, 28);
             this.BTN_startCapturing.TabIndex = 6;
             this.BTN_startCapturing.Text = "Start Capturing";
             this.BTN_startCapturing.UseVisualStyleBackColor = true;
@@ -110,7 +101,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 514);
             this.Controls.Add(this.BTN_startCapturing);
-            this.Controls.Add(this.LBL_test);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BTN_scan);
             this.Controls.Add(this.BTN_stop);
@@ -122,7 +112,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -133,7 +122,6 @@
         private System.Windows.Forms.Button BTN_stop;
         private System.Windows.Forms.Button BTN_scan;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label LBL_test;
         private System.Windows.Forms.Button BTN_startCapturing;
     }
 }
