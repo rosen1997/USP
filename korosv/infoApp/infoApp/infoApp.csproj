@@ -76,26 +76,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QRScannerDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QRScannerDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QRScannerDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QRScannerDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QRScannerDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QRScannerDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QRScannerDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QRScannerDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QRScannerDataSet4.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="atwork_record.resx">
       <DependentUpon>atwork_record.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,50 +120,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QRScannerDataSet1.xsc">
-      <DependentUpon>QRScannerDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QRScannerDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QRScannerDataSet1.xss">
-      <DependentUpon>QRScannerDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet2.xsc">
-      <DependentUpon>QRScannerDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QRScannerDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QRScannerDataSet2.xss">
-      <DependentUpon>QRScannerDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet3.xsc">
-      <DependentUpon>QRScannerDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QRScannerDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QRScannerDataSet3.xss">
-      <DependentUpon>QRScannerDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet4.xsc">
-      <DependentUpon>QRScannerDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="QRScannerDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QRScannerDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QRScannerDataSet4.xss">
-      <DependentUpon>QRScannerDataSet4.xsd</DependentUpon>
-    </None>
     <None Include="Resources\41422dd6962fb8e2c31f1eb382de1d0e.png" />
   </ItemGroup>
   <ItemGroup>

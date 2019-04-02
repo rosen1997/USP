@@ -19,12 +19,10 @@ namespace infoApp
 
         private void atwork_record_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qRScannerDataSet4.ATWORK' table. You can move, or remove it, as needed.
-            this.aTWORKTableAdapter1.Fill(this.qRScannerDataSet4.ATWORK);
-            // TODO: This line of code loads data into the 'qRScannerDataSet3.RECORDS' table. You can move, or remove it, as needed.
-            this.rECORDSTableAdapter.Fill(this.qRScannerDataSet3.RECORDS);
-            // TODO: This line of code loads data into the 'qRScannerDataSet2.ATWORK' table. You can move, or remove it, as needed.
-            this.aTWORKTableAdapter.Fill(this.qRScannerDataSet2.ATWORK);
+            // TODO: This line of code loads data into the 'qRScannerDataSet.RECORDS' table. You can move, or remove it, as needed.
+            this.rECORDSTableAdapter1.Fill(this.qRScannerDataSet.RECORDS);
+            // TODO: This line of code loads data into the 'qRScannerDataSet.ATWORK' table. You can move, or remove it, as needed.
+            this.aTWORKTableAdapter2.Fill(this.qRScannerDataSet.ATWORK);
 
         }
     }

@@ -20,9 +20,13 @@ namespace infoApp
 
         private void people_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qRScannerDataSet.PEOPLE' table. You can move, or remove it, as needed.
-            this.pEOPLETableAdapter.Fill(this.qRScannerDataSet.PEOPLE);
+            try
+            {
+                this.pEOPLETableAdapter.Fill(this.qRScannerDataSet.PEOPLE);
 
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            // TODO: This line of code loads data into the 'qRScannerDataSet.PEOPLE' table. You can move, or remove it, as needed.
         }
 
         private void searchByNameToolStripButton_Click(object sender, EventArgs e)

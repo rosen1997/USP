@@ -9,3 +9,14 @@ E:\3-ti kurs\2sem\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.exe
 E:\3-ti kurs\2sem\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.pdb
 E:\3-ti kurs\2sem\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.people.resources
 E:\3-ti kurs\2sem\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.atwork_record.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\bin\Debug\infoApp.exe.config
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.exe
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.pdb
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\bin\Debug\infoApp.exe
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\bin\Debug\infoApp.pdb
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.csprojResolveAssemblyReference.cache
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.atwork_record.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.Form1.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.people.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.Properties.Resources.resources
+E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.csproj.GenerateResource.Cache

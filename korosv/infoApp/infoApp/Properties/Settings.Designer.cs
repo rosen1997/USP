@@ -26,10 +26,22 @@ namespace infoApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=A-PC\\SQLEXPRESS;Initial Catalog=QRScanner;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9GS6M0J\\PARKING;Initial Catalog=QRControl;Integrated Security" +
+            "=True")]
         public string QRScannerConnectionString {
             get {
                 return ((string)(this["QRScannerConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9GS6M0J\\PARKING;Initial Catalog=QRControl;Integrated Security" +
+            "=True")]
+        public string QRControlConnectionString {
+            get {
+                return ((string)(this["QRControlConnectionString"]));
             }
         }
     }
