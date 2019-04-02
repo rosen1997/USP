@@ -30,10 +30,6 @@ namespace infoApp {
         
         private RECORDSDataTable tableRECORDS;
         
-        private global::System.Data.DataRelation relationFK__ATWORK__ID_PERSO__07020F21;
-        
-        private global::System.Data.DataRelation relationRECORDS_PEOPLE_FK;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -246,8 +242,6 @@ namespace infoApp {
                     this.tableRECORDS.InitVars();
                 }
             }
-            this.relationFK__ATWORK__ID_PERSO__07020F21 = this.Relations["FK__ATWORK__ID_PERSO__07020F21"];
-            this.relationRECORDS_PEOPLE_FK = this.Relations["RECORDS_PEOPLE_FK"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,14 +258,6 @@ namespace infoApp {
             base.Tables.Add(this.tableATWORK);
             this.tableRECORDS = new RECORDSDataTable();
             base.Tables.Add(this.tableRECORDS);
-            this.relationFK__ATWORK__ID_PERSO__07020F21 = new global::System.Data.DataRelation("FK__ATWORK__ID_PERSO__07020F21", new global::System.Data.DataColumn[] {
-                        this.tablePEOPLE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableATWORK.ID_PERSONColumn}, false);
-            this.Relations.Add(this.relationFK__ATWORK__ID_PERSO__07020F21);
-            this.relationRECORDS_PEOPLE_FK = new global::System.Data.DataRelation("RECORDS_PEOPLE_FK", new global::System.Data.DataColumn[] {
-                        this.tablePEOPLE.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRECORDS.ID_PERSONColumn}, false);
-            this.Relations.Add(this.relationRECORDS_PEOPLE_FK);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -659,11 +645,11 @@ namespace infoApp {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnID_PERSON;
-            
             private global::System.Data.DataColumn columnENTER;
             
             private global::System.Data.DataColumn columnLEAVE;
+            
+            private global::System.Data.DataColumn columnNAME;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -708,14 +694,6 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_PERSONColumn {
-                get {
-                    return this.columnID_PERSON;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ENTERColumn {
                 get {
                     return this.columnENTER;
@@ -727,6 +705,14 @@ namespace infoApp {
             public global::System.Data.DataColumn LEAVEColumn {
                 get {
                     return this.columnLEAVE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
                 }
             }
             
@@ -767,16 +753,13 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ATWORKRow AddATWORKRow(PEOPLERow parentPEOPLERowByFK__ATWORK__ID_PERSO__07020F21, System.DateTime ENTER, System.DateTime LEAVE) {
+            public ATWORKRow AddATWORKRow(System.DateTime ENTER, System.DateTime LEAVE, string NAME) {
                 ATWORKRow rowATWORKRow = ((ATWORKRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
                         ENTER,
-                        LEAVE};
-                if ((parentPEOPLERowByFK__ATWORK__ID_PERSO__07020F21 != null)) {
-                    columnValuesArray[1] = parentPEOPLERowByFK__ATWORK__ID_PERSO__07020F21[0];
-                }
+                        LEAVE,
+                        NAME};
                 rowATWORKRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowATWORKRow);
                 return rowATWORKRow;
@@ -807,9 +790,9 @@ namespace infoApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnID_PERSON = base.Columns["ID_PERSON"];
                 this.columnENTER = base.Columns["ENTER"];
                 this.columnLEAVE = base.Columns["LEAVE"];
+                this.columnNAME = base.Columns["NAME"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -817,12 +800,12 @@ namespace infoApp {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnID_PERSON = new global::System.Data.DataColumn("ID_PERSON", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_PERSON);
                 this.columnENTER = new global::System.Data.DataColumn("ENTER", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnENTER);
                 this.columnLEAVE = new global::System.Data.DataColumn("LEAVE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLEAVE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -831,8 +814,9 @@ namespace infoApp {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnID_PERSON.AllowDBNull = false;
                 this.columnENTER.AllowDBNull = false;
+                this.columnNAME.AllowDBNull = false;
+                this.columnNAME.MaxLength = 64;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -968,11 +952,11 @@ namespace infoApp {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnID_PERSON;
-            
             private global::System.Data.DataColumn columnENTER;
             
             private global::System.Data.DataColumn columnLEAVE;
+            
+            private global::System.Data.DataColumn columnNAME;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1017,14 +1001,6 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_PERSONColumn {
-                get {
-                    return this.columnID_PERSON;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ENTERColumn {
                 get {
                     return this.columnENTER;
@@ -1036,6 +1012,14 @@ namespace infoApp {
             public global::System.Data.DataColumn LEAVEColumn {
                 get {
                     return this.columnLEAVE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
                 }
             }
             
@@ -1076,16 +1060,13 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RECORDSRow AddRECORDSRow(PEOPLERow parentPEOPLERowByRECORDS_PEOPLE_FK, System.DateTime ENTER, System.DateTime LEAVE) {
+            public RECORDSRow AddRECORDSRow(System.DateTime ENTER, System.DateTime LEAVE, string NAME) {
                 RECORDSRow rowRECORDSRow = ((RECORDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
                         ENTER,
-                        LEAVE};
-                if ((parentPEOPLERowByRECORDS_PEOPLE_FK != null)) {
-                    columnValuesArray[1] = parentPEOPLERowByRECORDS_PEOPLE_FK[0];
-                }
+                        LEAVE,
+                        NAME};
                 rowRECORDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRECORDSRow);
                 return rowRECORDSRow;
@@ -1116,9 +1097,9 @@ namespace infoApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnID_PERSON = base.Columns["ID_PERSON"];
                 this.columnENTER = base.Columns["ENTER"];
                 this.columnLEAVE = base.Columns["LEAVE"];
+                this.columnNAME = base.Columns["NAME"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1126,12 +1107,12 @@ namespace infoApp {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnID_PERSON = new global::System.Data.DataColumn("ID_PERSON", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_PERSON);
                 this.columnENTER = new global::System.Data.DataColumn("ENTER", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnENTER);
                 this.columnLEAVE = new global::System.Data.DataColumn("LEAVE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLEAVE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -1140,9 +1121,10 @@ namespace infoApp {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnID_PERSON.AllowDBNull = false;
                 this.columnENTER.AllowDBNull = false;
                 this.columnLEAVE.AllowDBNull = false;
+                this.columnNAME.AllowDBNull = false;
+                this.columnNAME.MaxLength = 64;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1315,28 +1297,6 @@ namespace infoApp {
                     this[this.tablePEOPLE.POSITIONColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ATWORKRow[] GetATWORKRows() {
-                if ((this.Table.ChildRelations["FK__ATWORK__ID_PERSO__07020F21"] == null)) {
-                    return new ATWORKRow[0];
-                }
-                else {
-                    return ((ATWORKRow[])(base.GetChildRows(this.Table.ChildRelations["FK__ATWORK__ID_PERSO__07020F21"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RECORDSRow[] GetRECORDSRows() {
-                if ((this.Table.ChildRelations["RECORDS_PEOPLE_FK"] == null)) {
-                    return new RECORDSRow[0];
-                }
-                else {
-                    return ((RECORDSRow[])(base.GetChildRows(this.Table.ChildRelations["RECORDS_PEOPLE_FK"])));
-                }
-            }
         }
         
         /// <summary>
@@ -1361,17 +1321,6 @@ namespace infoApp {
                 }
                 set {
                     this[this.tableATWORK.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_PERSON {
-                get {
-                    return ((int)(this[this.tableATWORK.ID_PERSONColumn]));
-                }
-                set {
-                    this[this.tableATWORK.ID_PERSONColumn] = value;
                 }
             }
             
@@ -1404,12 +1353,12 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PEOPLERow PEOPLERow {
+            public string NAME {
                 get {
-                    return ((PEOPLERow)(this.GetParentRow(this.Table.ParentRelations["FK__ATWORK__ID_PERSO__07020F21"])));
+                    return ((string)(this[this.tableATWORK.NAMEColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__ATWORK__ID_PERSO__07020F21"]);
+                    this[this.tableATWORK.NAMEColumn] = value;
                 }
             }
             
@@ -1453,17 +1402,6 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_PERSON {
-                get {
-                    return ((int)(this[this.tableRECORDS.ID_PERSONColumn]));
-                }
-                set {
-                    this[this.tableRECORDS.ID_PERSONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime ENTER {
                 get {
                     return ((global::System.DateTime)(this[this.tableRECORDS.ENTERColumn]));
@@ -1486,12 +1424,12 @@ namespace infoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PEOPLERow PEOPLERow {
+            public string NAME {
                 get {
-                    return ((PEOPLERow)(this.GetParentRow(this.Table.ParentRelations["RECORDS_PEOPLE_FK"])));
+                    return ((string)(this[this.tableRECORDS.NAMEColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["RECORDS_PEOPLE_FK"]);
+                    this[this.tableRECORDS.NAMEColumn] = value;
                 }
             }
         }
@@ -2167,44 +2105,10 @@ namespace infoApp.QRScannerDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ATWORK";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ID_PERSON", "ID_PERSON");
             tableMapping.ColumnMappings.Add("ENTER", "ENTER");
             tableMapping.ColumnMappings.Add("LEAVE", "LEAVE");
+            tableMapping.ColumnMappings.Add("NAME", "NAME");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [ATWORK] WHERE (([ID] = @Original_ID) AND ([ID_PERSON] = @Original_ID" +
-                "_PERSON) AND ([ENTER] = @Original_ENTER) AND ((@IsNull_LEAVE = 1 AND [LEAVE] IS " +
-                "NULL) OR ([LEAVE] = @Original_LEAVE)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LEAVE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [ATWORK] ([ID_PERSON], [ENTER], [LEAVE]) VALUES (@ID_PERSON, @ENTER, " +
-                "@LEAVE);\r\nSELECT ID, ID_PERSON, ENTER, LEAVE FROM ATWORK WHERE (ID = SCOPE_IDENT" +
-                "ITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [ATWORK] SET [ID_PERSON] = @ID_PERSON, [ENTER] = @ENTER, [LEAVE] = @LEAVE WHERE (([ID] = @Original_ID) AND ([ID_PERSON] = @Original_ID_PERSON) AND ([ENTER] = @Original_ENTER) AND ((@IsNull_LEAVE = 1 AND [LEAVE] IS NULL) OR ([LEAVE] = @Original_LEAVE)));
-SELECT ID, ID_PERSON, ENTER, LEAVE FROM ATWORK WHERE (ID = @ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LEAVE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2220,7 +2124,8 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM ATWORK WHERE (ID = @ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        ID, ID_PERSON, ENTER, LEAVE\r\nFROM            ATWORK";
+            this._commandCollection[0].CommandText = "SELECT ATWORK.ID, PEOPLE.NAME, ATWORK.ENTER, ATWORK.LEAVE\r\nFROM     ATWORK INNER " +
+                "JOIN\r\n                  PEOPLE ON PEOPLE.ID = ATWORK.ID_PERSON";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2246,145 +2151,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM ATWORK WHERE (ID = @ID)";
             QRScannerDataSet.ATWORKDataTable dataTable = new QRScannerDataSet.ATWORKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QRScannerDataSet.ATWORKDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QRScannerDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "ATWORK");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, int Original_ID_PERSON, System.DateTime Original_ENTER, global::System.Nullable<global::System.DateTime> Original_LEAVE) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_PERSON));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_ENTER));
-            if ((Original_LEAVE.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_LEAVE.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_PERSON, System.DateTime ENTER, global::System.Nullable<global::System.DateTime> LEAVE) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_PERSON));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(ENTER));
-            if ((LEAVE.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(LEAVE.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_PERSON, System.DateTime ENTER, global::System.Nullable<global::System.DateTime> LEAVE, int Original_ID, int Original_ID_PERSON, System.DateTime Original_ENTER, global::System.Nullable<global::System.DateTime> Original_LEAVE, int ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_PERSON));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(ENTER));
-            if ((LEAVE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(LEAVE.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_PERSON));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_ENTER));
-            if ((Original_LEAVE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_LEAVE.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_PERSON, System.DateTime ENTER, global::System.Nullable<global::System.DateTime> LEAVE, int Original_ID, int Original_ID_PERSON, System.DateTime Original_ENTER, global::System.Nullable<global::System.DateTime> Original_LEAVE) {
-            return this.Update(ID_PERSON, ENTER, LEAVE, Original_ID, Original_ID_PERSON, Original_ENTER, Original_LEAVE, Original_ID);
         }
     }
     
@@ -2510,41 +2276,10 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM ATWORK WHERE (ID = @ID)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "RECORDS";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ID_PERSON", "ID_PERSON");
             tableMapping.ColumnMappings.Add("ENTER", "ENTER");
             tableMapping.ColumnMappings.Add("LEAVE", "LEAVE");
+            tableMapping.ColumnMappings.Add("NAME", "NAME");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [RECORDS] WHERE (([ID] = @Original_ID) AND ([ID_PERSON] = @Original_I" +
-                "D_PERSON) AND ([ENTER] = @Original_ENTER) AND ([LEAVE] = @Original_LEAVE))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [RECORDS] ([ID_PERSON], [ENTER], [LEAVE]) VALUES (@ID_PERSON, @ENTER," +
-                " @LEAVE);\r\nSELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = SCOPE_IDE" +
-                "NTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [RECORDS] SET [ID_PERSON] = @ID_PERSON, [ENTER] = @ENTER, [LEAVE] = @LEAVE WHERE (([ID] = @Original_ID) AND ([ID_PERSON] = @Original_ID_PERSON) AND ([ENTER] = @Original_ENTER) AND ([LEAVE] = @Original_LEAVE));
-SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_PERSON", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_PERSON", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENTER", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LEAVE", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2557,11 +2292,20 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM RECORDS";
+            this._commandCollection[0].CommandText = "SELECT RECORDS.ID, PEOPLE.NAME, RECORDS.ENTER, RECORDS.LEAVE\r\nFROM     RECORDS IN" +
+                "NER JOIN\r\n                  PEOPLE ON PEOPLE.ID = RECORDS.ID_PERSON";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT RECORDS.ID, PEOPLE.NAME, RECORDS.ENTER, RECORDS.LEAVE FROM RECORDS JOIN PE" +
+                "OPLE ON PEOPLE.ID = RECORDS.ID_PERSON\r\n WHERE RECORDS.ENTER >= @D AND RECORDS.LE" +
+                "AVE <= @D2";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@D", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "ENTER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@D2", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "LEAVE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2591,116 +2335,16 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QRScannerDataSet.RECORDSDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QRScannerDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "RECORDS");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, int Original_ID_PERSON, System.DateTime Original_ENTER, System.DateTime Original_LEAVE) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_PERSON));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_ENTER));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_LEAVE));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDate(QRScannerDataSet.RECORDSDataTable dataTable, System.DateTime D, System.DateTime D2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(D));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(D2));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_PERSON, System.DateTime ENTER, System.DateTime LEAVE) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_PERSON));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(ENTER));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(LEAVE));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_PERSON, System.DateTime ENTER, System.DateTime LEAVE, int Original_ID, int Original_ID_PERSON, System.DateTime Original_ENTER, System.DateTime Original_LEAVE, int ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_PERSON));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(ENTER));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(LEAVE));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_PERSON));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_ENTER));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_LEAVE));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_PERSON, System.DateTime ENTER, System.DateTime LEAVE, int Original_ID, int Original_ID_PERSON, System.DateTime Original_ENTER, System.DateTime Original_LEAVE) {
-            return this.Update(ID_PERSON, ENTER, LEAVE, Original_ID, Original_ID_PERSON, Original_ENTER, Original_LEAVE, Original_ID);
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     
@@ -2717,10 +2361,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
         private UpdateOrderOption _updateOrder;
         
         private PEOPLETableAdapter _pEOPLETableAdapter;
-        
-        private ATWORKTableAdapter _aTWORKTableAdapter;
-        
-        private RECORDSTableAdapter _rECORDSTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2753,34 +2393,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public ATWORKTableAdapter ATWORKTableAdapter {
-            get {
-                return this._aTWORKTableAdapter;
-            }
-            set {
-                this._aTWORKTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public RECORDSTableAdapter RECORDSTableAdapter {
-            get {
-                return this._rECORDSTableAdapter;
-            }
-            set {
-                this._rECORDSTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -2802,14 +2414,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
                             && (this._pEOPLETableAdapter.Connection != null))) {
                     return this._pEOPLETableAdapter.Connection;
                 }
-                if (((this._aTWORKTableAdapter != null) 
-                            && (this._aTWORKTableAdapter.Connection != null))) {
-                    return this._aTWORKTableAdapter.Connection;
-                }
-                if (((this._rECORDSTableAdapter != null) 
-                            && (this._rECORDSTableAdapter.Connection != null))) {
-                    return this._rECORDSTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -2824,12 +2428,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
             get {
                 int count = 0;
                 if ((this._pEOPLETableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._aTWORKTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._rECORDSTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -2852,24 +2450,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._aTWORKTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ATWORK.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._aTWORKTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._rECORDSTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.RECORDS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rECORDSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -2888,22 +2468,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._aTWORKTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ATWORK.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._aTWORKTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._rECORDSTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.RECORDS.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rECORDSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -2914,22 +2478,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(QRScannerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._rECORDSTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.RECORDS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._rECORDSTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._aTWORKTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ATWORK.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._aTWORKTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._pEOPLETableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PEOPLE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -2982,16 +2530,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._aTWORKTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._aTWORKTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._rECORDSTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._rECORDSTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -3031,24 +2569,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
                     if (this._pEOPLETableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._pEOPLETableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._pEOPLETableAdapter.Adapter);
-                    }
-                }
-                if ((this._aTWORKTableAdapter != null)) {
-                    revertConnections.Add(this._aTWORKTableAdapter, this._aTWORKTableAdapter.Connection);
-                    this._aTWORKTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._aTWORKTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._aTWORKTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._aTWORKTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._aTWORKTableAdapter.Adapter);
-                    }
-                }
-                if ((this._rECORDSTableAdapter != null)) {
-                    revertConnections.Add(this._rECORDSTableAdapter, this._rECORDSTableAdapter.Connection);
-                    this._rECORDSTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._rECORDSTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._rECORDSTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._rECORDSTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._rECORDSTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3112,14 +2632,6 @@ SELECT ID, ID_PERSON, ENTER, LEAVE FROM RECORDS WHERE (ID = @ID)";
                 if ((this._pEOPLETableAdapter != null)) {
                     this._pEOPLETableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pEOPLETableAdapter]));
                     this._pEOPLETableAdapter.Transaction = null;
-                }
-                if ((this._aTWORKTableAdapter != null)) {
-                    this._aTWORKTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._aTWORKTableAdapter]));
-                    this._aTWORKTableAdapter.Transaction = null;
-                }
-                if ((this._rECORDSTableAdapter != null)) {
-                    this._rECORDSTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rECORDSTableAdapter]));
-                    this._rECORDSTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

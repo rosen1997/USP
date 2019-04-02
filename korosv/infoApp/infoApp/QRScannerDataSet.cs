@@ -2,6 +2,9 @@
     
     
     public partial class QRScannerDataSet {
+        partial class ATWORKDataTable
+        {
+        }
     }
 }
 

@@ -19,11 +19,38 @@ namespace infoApp
 
         private void atwork_record_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qRScannerDataSet.RECORDS' table. You can move, or remove it, as needed.
-            this.rECORDSTableAdapter1.Fill(this.qRScannerDataSet.RECORDS);
-            // TODO: This line of code loads data into the 'qRScannerDataSet.ATWORK' table. You can move, or remove it, as needed.
-            this.aTWORKTableAdapter2.Fill(this.qRScannerDataSet.ATWORK);
+            try
+            {
+                this.rECORDSTableAdapter1.Fill(this.qRScannerDataSet.RECORDS);
+                this.aTWORKTableAdapter2.Fill(this.qRScannerDataSet.ATWORK);
 
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
+
+        }
+
+        private void BTN_search_Click(object sender, EventArgs e)
+        {
+            DateTime date = monthCalendar1.SelectionRange.Start;
+            DateTime dateNext = monthCalendar1.SelectionRange.Start;
+            dateNext = dateNext.AddDays(1);
+
+            try
+            {
+                this.rECORDSTableAdapter1.FillByDate(this.qRScannerDataSet.RECORDS, date, dateNext);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void TSB_refresh_Click(object sender, EventArgs e)
+        {
+            atwork_record_Load(sender, e);
         }
     }
 }
