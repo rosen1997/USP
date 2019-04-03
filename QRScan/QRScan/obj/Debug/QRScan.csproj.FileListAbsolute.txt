@@ -26,6 +26,7 @@ E:\vsichko\SIT\kurs_3\semester_2\USP\Local\QRScan_extend\QRScan\obj\Debug\QRScan
 E:\vsichko\SIT\kurs_3\semester_2\USP\Local\QRScan_extend\QRScan\obj\Debug\QRScan.Form1.resources
 E:\vsichko\SIT\kurs_3\semester_2\USP\Local\QRScan_extend\QRScan\obj\Debug\QRScan.Properties.Resources.resources
 E:\vsichko\SIT\kurs_3\semester_2\USP\Local\QRScan_extend\QRScan\obj\Debug\QRScan.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\bin\Debug\QRScan.exe.config
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.exe
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.pdb
@@ -40,3 +41,12 @@ E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRSc
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.Form1.resources
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.Properties.Resources.resources
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\QRScan\QRScan\obj\Debug\QRScan.csproj.GenerateResource.Cache
+=======
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\bin\Debug\QRScan.exe.config
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\obj\Debug\QRScan.exe
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\obj\Debug\QRScan.pdb
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\obj\Debug\QRScan.csprojResolveAssemblyReference.cache
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\obj\Debug\QRScan.Form1.resources
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\obj\Debug\QRScan.Properties.Resources.resources
+C:\Users\A\Desktop\kursov\USP\QRScan\QRScan\obj\Debug\QRScan.csproj.GenerateResource.Cache
+>>>>>>> 6354404cd55a7f7644da2981bcdfbb0b21578ba2
