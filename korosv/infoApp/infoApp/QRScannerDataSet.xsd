@@ -159,7 +159,7 @@ FROM     RECORDS INNER JOIN
   <xs:element name="QRScannerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QRScannerDataSet" msprop:Generator_UserDSName="QRScannerDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PEOPLE" msprop:Generator_TableClassName="PEOPLEDataTable" msprop:Generator_TableVarName="tablePEOPLE" msprop:Generator_RowChangedName="PEOPLERowChanged" msprop:Generator_TablePropName="PEOPLE" msprop:Generator_RowDeletingName="PEOPLERowDeleting" msprop:Generator_RowChangingName="PEOPLERowChanging" msprop:Generator_RowEvHandlerName="PEOPLERowChangeEventHandler" msprop:Generator_RowDeletedName="PEOPLERowDeleted" msprop:Generator_RowClassName="PEOPLERow" msprop:Generator_UserTableName="PEOPLE" msprop:Generator_RowEvArgName="PEOPLERowChangeEvent">
+        <xs:element name="PEOPLE" msprop:Generator_TableClassName="PEOPLEDataTable" msprop:Generator_TableVarName="tablePEOPLE" msprop:Generator_TablePropName="PEOPLE" msprop:Generator_RowDeletingName="PEOPLERowDeleting" msprop:Generator_RowChangingName="PEOPLERowChanging" msprop:Generator_RowEvHandlerName="PEOPLERowChangeEventHandler" msprop:Generator_RowDeletedName="PEOPLERowDeleted" msprop:Generator_UserTableName="PEOPLE" msprop:Generator_RowChangedName="PEOPLERowChanged" msprop:Generator_RowEvArgName="PEOPLERowChangeEvent" msprop:Generator_RowClassName="PEOPLERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -180,7 +180,7 @@ FROM     RECORDS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ATWORK" msprop:Generator_TableClassName="ATWORKDataTable" msprop:Generator_TableVarName="tableATWORK" msprop:Generator_TablePropName="ATWORK" msprop:Generator_RowDeletingName="ATWORKRowDeleting" msprop:Generator_RowChangingName="ATWORKRowChanging" msprop:Generator_RowEvHandlerName="ATWORKRowChangeEventHandler" msprop:Generator_RowDeletedName="ATWORKRowDeleted" msprop:Generator_UserTableName="ATWORK" msprop:Generator_RowChangedName="ATWORKRowChanged" msprop:Generator_RowEvArgName="ATWORKRowChangeEvent" msprop:Generator_RowClassName="ATWORKRow">
+        <xs:element name="ATWORK" msprop:Generator_TableClassName="ATWORKDataTable" msprop:Generator_TableVarName="tableATWORK" msprop:Generator_RowChangedName="ATWORKRowChanged" msprop:Generator_TablePropName="ATWORK" msprop:Generator_RowDeletingName="ATWORKRowDeleting" msprop:Generator_RowChangingName="ATWORKRowChanging" msprop:Generator_RowEvHandlerName="ATWORKRowChangeEventHandler" msprop:Generator_RowDeletedName="ATWORKRowDeleted" msprop:Generator_RowClassName="ATWORKRow" msprop:Generator_UserTableName="ATWORK" msprop:Generator_RowEvArgName="ATWORKRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -196,7 +196,7 @@ FROM     RECORDS INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RECORDS" msprop:Generator_TableClassName="RECORDSDataTable" msprop:Generator_TableVarName="tableRECORDS" msprop:Generator_TablePropName="RECORDS" msprop:Generator_RowDeletingName="RECORDSRowDeleting" msprop:Generator_RowChangingName="RECORDSRowChanging" msprop:Generator_RowEvHandlerName="RECORDSRowChangeEventHandler" msprop:Generator_RowDeletedName="RECORDSRowDeleted" msprop:Generator_UserTableName="RECORDS" msprop:Generator_RowChangedName="RECORDSRowChanged" msprop:Generator_RowEvArgName="RECORDSRowChangeEvent" msprop:Generator_RowClassName="RECORDSRow">
+        <xs:element name="RECORDS" msprop:Generator_TableClassName="RECORDSDataTable" msprop:Generator_TableVarName="tableRECORDS" msprop:Generator_RowChangedName="RECORDSRowChanged" msprop:Generator_TablePropName="RECORDS" msprop:Generator_RowDeletingName="RECORDSRowDeleting" msprop:Generator_RowChangingName="RECORDSRowChanging" msprop:Generator_RowEvHandlerName="RECORDSRowChangeEventHandler" msprop:Generator_RowDeletedName="RECORDSRowDeleted" msprop:Generator_RowClassName="RECORDSRow" msprop:Generator_UserTableName="RECORDS" msprop:Generator_RowEvArgName="RECORDSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />

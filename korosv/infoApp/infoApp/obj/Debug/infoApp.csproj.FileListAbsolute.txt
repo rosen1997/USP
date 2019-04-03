@@ -20,3 +20,14 @@ E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\D
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.people.resources
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.Properties.Resources.resources
 E:\vsichko\SIT\kurs_3\semester_2\USP\ProjectGit\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.csproj.GenerateResource.Cache
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\bin\Debug\infoApp.exe.config
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.exe
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.pdb
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\bin\Debug\infoApp.exe
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\bin\Debug\infoApp.pdb
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.csprojResolveAssemblyReference.cache
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.atwork_record.resources
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.Form1.resources
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.people.resources
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.Properties.Resources.resources
+C:\Users\A\Desktop\ok\USP\korosv\infoApp\infoApp\obj\Debug\infoApp.csproj.GenerateResource.Cache

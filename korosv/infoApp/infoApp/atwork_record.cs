@@ -29,6 +29,7 @@ namespace infoApp
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
 
+
         }
 
         private void BTN_search_Click(object sender, EventArgs e)
@@ -51,6 +52,10 @@ namespace infoApp
         private void TSB_refresh_Click(object sender, EventArgs e)
         {
             atwork_record_Load(sender, e);
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
         }
     }
 }
